@@ -1,0 +1,48 @@
+
+
+{% extends "blog/madre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Secciones</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <form action="../../form-result.php" target="_blank">
+
+        <p>
+      
+          Seccion:
+      
+          <select name="nombre">
+      
+            <option>Deportes</option>
+      
+            <option>Novelas</option>
+    
+            <option>Educacion</option>
+    
+            <option>Salud</option>
+      
+          </select>
+      
+        </p>
+      
+        
+      
+      </form>
+</body>
+</html>
+
+
+
+{% endblock %}

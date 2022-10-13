@@ -1,3 +1,13 @@
+{% extends "blog/madre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
+
+    {% if seccion.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +19,15 @@
 </head>
 <body style="background-color: rgb(255, 255, 255);">
     <form action="/blog/autores/" method="POST">{% csrf_token %}
-        <p>Nombre: <input type="text" name="nombre"> </p>
-        <p>Apellido: <input type="text" name="apellido"> </p>
-        <p>Edad: <input type="number" name="edad"> </p>
-        <p>Profesion: <input type="text" name="profesion"> </p>
+        <p>Nombre: <input type="text" name="nombre" placeholder="Escriba el nombre"> </p>
+        <p>Apellido: <input type="text" name="apellido" placeholder="Escriba el apellido"> </p>
+        <p>Edad: <input type="number" name="edad" placeholder="Escriba la edad"> </p>
+        <p>Profesion: <input type="text" name="profesion" placeholder="Escriba una profesion"> </p>
         <input type="submit" value="Guardar">
     </form>
 </body>
 </html>
+
+
+
+{% endblock %}

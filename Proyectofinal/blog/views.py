@@ -29,3 +29,7 @@ def seccion(request):
 
 def contacto(request):
     return render(request, 'blog/contacto.html')
+
+def busqueda(request):
+    return render(request, "AppCoder/buscar.html")
+    

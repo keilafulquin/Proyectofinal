@@ -1,25 +1,27 @@
+{% extends "blog/madre.html" %}
+{% load static %}
+{% block contenidoQueCambia %}
 
-<section>
-    <div class="container">
-        <form>
-            <div class="step step-1 active">
-                <div class="form-group">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" />
-                </div>
-                <div class="form-group">
-                    <label for="apellido">Apellido</label>
-                    <input type="text" id="apellido" name="apellido" />
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" name="email" />
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Telefono</label>
-                    <input type="number" id="telefono" name="telefono" />  
-                </div>
-                <button type="submit" class="submit-btn">Enviar</button>
-        </form>
-    </div>
-</section>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contacto</title>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+    <form action="/blog/contacto/" method="POST">{% csrf_token %}
+        <p>Nombre: <input type="text" name="nombre" placeholder="Escriba el nombre"> </p>
+        <p>Apellido: <input type="text" name="apellido" placeholder="Escriba el apellido"> </p>
+        <p>Email: <input type="email" name="email" placeholder="Escriba el email"> </p>
+        <p>Telefono: <input type="number" name="telefono" placeholder="Ingrese un telefono"> </p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
+  
+
+{% endblock %}
