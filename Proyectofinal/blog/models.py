@@ -1,4 +1,4 @@
-from pyexpat import model
+
 from django.db import models
 
 # Create your models here.
@@ -23,10 +23,10 @@ class Articulo(models.Model):
 
     titulo = models.CharField(max_length = 30)
     texto = models.CharField(max_length = 500)
-    fecha = models.DateField()
 
     def __str__(self):
         return self.titulo
+    
 
 class Seccion(models.Model):
     class Meta:

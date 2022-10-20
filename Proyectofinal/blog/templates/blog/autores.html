@@ -2,11 +2,7 @@
 {% load static %}
 {% block contenidoQueCambia %}
 
-    {% if seccion.errors %}
-
-    <p style="color: red;"> Están mal los datos, revisar</p>
-
-    {% endif %}
+    
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +14,8 @@
 	<title>Autores</title>
 </head>
 <body style="background-color: rgb(255, 255, 255);">
-    <form action="/blog/autores/" method="POST">{% csrf_token %}
+    <form action="/blog/autores/" method="POST">
+        {% csrf_token %}
         <p>Nombre: <input type="text" name="nombre" placeholder="Escriba el nombre"> </p>
         <p>Apellido: <input type="text" name="apellido" placeholder="Escriba el apellido"> </p>
         <p>Edad: <input type="number" name="edad" placeholder="Escriba la edad"> </p>
