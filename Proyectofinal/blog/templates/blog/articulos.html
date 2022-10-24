@@ -16,6 +16,7 @@
     <form action="/blog/articulos/" method="POST">{% csrf_token %}
         <p>Titulo: <input type="text" name="titulo" placeholder="Elija un titulo"> </p>
         <p>Texto:<textarea name="texto"></textarea> </p>
+        <p>Titulo: <input type="date" name="fecha"> </p>
         <input type="submit" value="Guardar">
     </form>
 </body>

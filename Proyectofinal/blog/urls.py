@@ -3,7 +3,17 @@ from django import views
 from django.urls import path
 
 
-from blog.views import mostrar_inicio, autores, articulos, seccion, contacto, formulario, buscar
+
+from blog.views import (
+    mostrar_inicio, 
+    autores, 
+    articulos, 
+    seccion, 
+    contacto, 
+    buscar_articulo, 
+    buscar_autor, 
+    buscar_contacto
+)
 
 
 urlpatterns = [
@@ -12,8 +22,7 @@ urlpatterns = [
     path('articulos/', articulos, name = "Articulos"),
     path('seccion/', seccion, name = "Secciones"),
     path('contacto/', contacto, name = "Contacto"),
-    path('formulario/', formulario, name = "Formulario"),
-    path('buscar/', buscar),
-    #path('busqueda/', busqueda, name="Busqueda")
-    
+    path('buscar-articulo/', buscar_articulo),
+    path('buscar-autor/', buscar_autor),
+    path('buscar-contacto/', buscar_contacto),
 ]

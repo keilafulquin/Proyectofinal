@@ -1,0 +1,12 @@
+{% extends "blog/madre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<form action="/blog/buscar-autor/" method="POST">{% csrf_token %}
+    <p><input type="text" name="nombre" id="nombre"></p>
+    <input type="submit" value="Buscar el autor">
+</form>
+
+{% endblock %}
